@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* Body and font settings */
 body {
@@ -130,9 +134,10 @@ nav {
 .project-card {
     background-color: #fff;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .project-card img {
@@ -151,10 +156,13 @@ nav {
     color: #555;
 }
 
+
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #e8f0f2;
 }
+
 
 /* Contact Section */
 #contact {
@@ -231,3 +239,18 @@ footer {
         font-size: 28px;
     }
 }
+/* Section Appear Animation */
+#about, #projects, #contact {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Keyframe Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
