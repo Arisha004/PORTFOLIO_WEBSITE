@@ -3,64 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A beautiful portfolio showcasing my skills and projects.">
-    <meta name="author" content="Arisha Mumtaz">
-    <meta name="keywords" content="Arisha Mumtaz, Portfolio, Front-End Developer, Designer, Web Development">
-    <meta name="robots" content="index, follow">
-    <title>Arisha Mumtaz - Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Arisha Mumtaz</div>
-            <ul class="nav-links">
-                <li><a href="#about" aria-label="About Me section">About</a></li>
-                <li><a href="#projects" aria-label="My projects">Projects</a></li>
-                <li><a href="#contact" aria-label="Contact me">Contact</a></li>
+        <nav class="navbar">
+            <div class="logo" aria-label="Home">Portfolio</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" aria-current="page">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
-       </header>
+    </header>
 
     <main>
-        <section id="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>I'm a Front-End Developer & Designer passionate about creating stunning web experiences.</p>
-            <a href="#projects" class="btn">View My Work</a>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Full-Stack Developer & UI/UX Designer</p>
+            </div>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I’m Arisha Mumtaz, a skilled Front-End Developer and Designer with expertise in crafting user-friendly, 
-                visually appealing websites. I aim to deliver exceptional digital experiences that leave a lasting impact.
-            </p>
-            <p>
-                My journey has been driven by passion and dedication, and I continue to evolve as a designer and developer, 
-                turning ideas into beautiful, functional realities.
-            </p>
-        </section>
-        
-        <section id="projects">
+        <section id="projects" class="projects">
             <h2>My Projects</h2>
-            <div class="projects-container">
-                   </div>
+            <div class="loading-spinner" aria-label="Loading projects">
+                <div class="spinner"></div>
+            </div>
+            <div class="projects-grid"></div>
         </section>
 
-        <section id="contact">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Passionate developer focused on creating intuitive and accessible web experiences.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
             <h2>Contact Me</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required aria-label="Your Name">
-<input type="email" placeholder="Your Email" required aria-label="Your Email">
-<textarea placeholder="Your Message" required aria-label="Your Message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Email Me"><i class="fas fa-envelope"></i></a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Arisha Mumtaz. All Rights Reserved.</p>
+        <p>&copy; 2024 Portfolio. All rights reserved.</p>
     </footer>
 
     <script src="app.js"></script>
